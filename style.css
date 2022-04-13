@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: #000;
+}
+:root{
+    --colorGray : #edeff0;
+    --colorSkyBlue : rgb(17, 117, 238);
+}
+
+/* Navigation bar */
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.3em;
+    padding: 20px 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+   
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover{
+    color: var(--colorSkyBlue);
+}
+
+section{
+    margin: 0 10em;
+}
+
+/* Home page */
+.banner{
+    padding: 40px 40px 0 40px;
+    height: 100%;
+    background: var(--colorGray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.banner .welcomeMsg h4:first-child{
+    color: var(--colorSkyBlue);
+    font-weight: 600;
+    font-size: 2.1em;
+    margin: 4px;
+}
+.banner .welcomeMsg h4:nth-child(3){
+    font-size: 2em;
+}
+.banner .welcomeMsg h1{
+    font-size: 4em;
+    margin: -18px 0;
+    letter-spacing: 2px;
+}
+.banner .welcomeImg img{
+    height: 389px;
+    width: 274px;
+}
+.banner .welcomeMsg button{
+    /* background-color: rgb(17, 117, 238);
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    margin-top: 30px; */
+    /* transition: 0.5s; */
+    width: 150px;
+    height: 50px;
+    background: none;
+    font-size: 18px;
+    color: white;
+    border: 2px solid var(--colorSkyBlue);
+    background: var(--colorSkyBlue);
+    /* margin: 50px; */
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.banner .welcomeMsg button:hover{
+    /* background: #fff; */
+    /* color: rgb(17, 117, 238); */
+    /* opacity: 0.8; */
+    /* transition: 0.5s;
+    background: rgb(17, 117, 238);
+    color: black;
+    box-shadow: 0px 0px 40px rgb(17, 117, 238); */
+    background-color: var(--colorGray);
+    color: black;
+}
+
+.about{
+    margin: 5em 20em;
+    display: flex;
+    gap: 80px;
+}
+.about .aboutImg{
+    background: var(--colorGray);
+    height: 300px;
+    min-width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.about .aboutImg img{
+    height: 275px;
+    width: 170px;
+}
+
+.about .aboutText div{
+    margin: 20px 0;
+}
+
+.about .aboutText i{
+    color: var(--colorSkyBlue);
+    margin-right: 20px;
+}
+.about .aboutText #intro{
+   color: var(--colorSkyBlue);
+   font-weight: bold;
+}
+.about .aboutText h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.about .aboutText h4{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#interest{
+   margin: 0px 0px;
+   font-size: 17px;
+}
+
+.skill{
+    background-color: var(--colorGray);
+    padding: 50px;
+}
+.skill .skillsList{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.skill h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1em;
+    font-weight: bold;
+}
+.skillsList .skillSet{
+    width: 100%;
+}
+.skillsList .skillprogress{
+    margin: 20px;
+    padding: 10px 20px;
+}
+.skillsList .skillprogress progress{
+    min-width: 100%;
+}
+.skillsList .skillItem{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.qualiExper{
+    /* background: red; */
+    padding: 50px 0px;
+}
+
+.qualiExper h1{
+    font-size: 2.1em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.qualiExperItem{
+    display: flex;
+    justify-content: space-between;
+}
+.qualification h1,
+.experience h1{
+    margin: 20px 0;
+    font-size: 1.5em;
+    text-align: left;
+}
+.qualification div,
+.experience div{
+    margin: 20px 0;
+}
+.qualification .bar,
+.experience .bar{
+    padding-right: 20px;
+    border-left: 4px solid var(--colorSkyBlue);
+    height: 70px;
+}
+.qualiExper i{
+    padding-right: 20px;
+    color: var(--colorSkyBlue);
+}
+
+.project{
+    text-align: center;
+}
+.project h1{
+    text-align: center;
+    font-size: 2.1em;
+}
+
+.projectList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 40px 0px;
+}
+.projectList .box{
+    width: 350px;
+    /* height: 300px; */
+    padding: 30px;
+    border: 2px solid var(--colorGray);
+    border-radius: 0 50px 0 0;
+    position: relative;
+    box-shadow:  5px 5px 10px #e1e3e6, -5px -5px 10px #ffffff;
+}
+.projectList .box h4{
+    margin: 10px  2px;
+    font-size: 22px;
+}
+.projectList .box:hover{
+    background: var(--colorSkyBlue);
+}
+.projectList .box:hover p,
+.projectList .box:hover h4{
+    color: #fff;
+}
+.projectList .box i{
+    font-size: 40px;
+    background: var(--colorSkyBlue);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -30px;
+    left: 60px;
+}
+.projectList .box:hover i,
+.projectList .box:hover button{
+    background: #fff;
+    color: var(--colorSkyBlue);
+}
+
+.projectList button{
+    margin-top: 20px;
+    background: var(--colorSkyBlue);
+    border: 1px solid var(--colorSkyBlue);
+    font: white;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.projectList button :hover{
+    background-color: white;
+    cursor: pointer;
+}
