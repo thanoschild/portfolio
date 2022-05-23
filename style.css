@@ -291,3 +291,39 @@ section{
     background-color: white;
     cursor: pointer;
 }
+
+.contact{
+  position: -webkit-sticky; /* Safari */
+  position: fixed;
+  bottom: 320px;
+  left: -120px;
+  /* margin: 1px; */
+}
+.contact div{
+    margin: 4px;
+    padding: 4px;
+    box-shadow:  5px 5px 10px #cacccf, 5px 5px 10px #ffffff;
+    border-radius: 5px;
+}
+.contact i{
+    font-size: 35px;
+    color: var(--colorSkyBlue);
+    cursor: pointer;
+}
+
+.contact div:first-child > a i:hover {
+  color: #0077b5;
+}
+.contact div:nth-child(2) > a i:hover {
+  color: #171515;
+}
+.contact div:nth-child(3) > i:hover {
+  color: #8a3ab9;
+}
+.contact div:nth-child(4) > i:hover {
+  color: #4267B2;
+}
+.contact div:nth-child(5) > i:hover {
+  color:  #EA4335;
+}
+
