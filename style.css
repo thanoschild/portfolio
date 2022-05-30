@@ -15,6 +15,25 @@
     --colorSkyBlue : rgb(17, 117, 238);
 }
 
+
+/* logo */
+/* .logo{
+  
+  position: fixed;
+  bottom: 320px;
+  left: -200px; 
+}*/
+/*
+.logo div{
+    width: 2px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo img{
+    object-fit: cover;
+} */
+
 /* Navigation bar */
 .navbar{
     display: flex;
@@ -295,15 +314,16 @@ section{
 .contact{
   position: -webkit-sticky; /* Safari */
   position: fixed;
-  bottom: 320px;
+  bottom: 250px;
   left: -120px;
   /* margin: 1px; */
 }
 .contact div{
-    margin: 4px;
-    padding: 4px;
+    margin: 6px;
+    padding: 7px;
     box-shadow:  5px 5px 10px #cacccf, 5px 5px 10px #ffffff;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 3px solid var(--colorSkyBlue);
 }
 .contact i{
     font-size: 35px;
@@ -313,7 +333,12 @@ section{
 
 .contact div:first-child > a i:hover {
   color: #0077b5;
+  border: #0077b5;
 }
+/* .contact div:first-child :hover {
+  color: #0077b5;
+  border: #0077b5;
+} */
 .contact div:nth-child(2) > a i:hover {
   color: #171515;
 }
