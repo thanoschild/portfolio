@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins&display=swap');
 
 /* css reset */
 *{
@@ -35,33 +35,33 @@
 } */
 
 /* Navigation bar */
-.navbar{
+.navBar{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 1.3em;
-    padding: 20px 80px;
+    justify-content: space-between;
+    background: #fff;
     position: sticky;
     top: 0;
     left: 0;
-    background: #fff;
+    height: 80px;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 100;
 }
-
-.navbar ul{
+.navBar .mobile-menu{
+    display: none;
+}
+.navBar ul{
     list-style: none;
     display: flex;
     gap: 50px;
-   
 }
-
-.navbar ul li a{
-    text-decoration: none;
-    color: black;
-    font-family: 'Baloo Bhai 2', cursive;
+.navBar ul li a,
+.navBar .logo a{
+    font-size: 20px;
     font-weight: bold;
 }
 
-.navbar ul li a:hover{
+.navBar .menu ul li a:hover{
     color: var(--colorSkyBlue);
 }
 
@@ -71,7 +71,7 @@ section{
 
 /* Home page */
 .banner{
-    padding: 40px 40px 0 40px;
+    padding: 40px 40px 40px 40px;
     height: 100%;
     background: var(--colorGray);
     display: flex;
@@ -94,8 +94,11 @@ section{
     letter-spacing: 2px;
 }
 .banner .welcomeImg img{
+    border: 2px solid var(--colorSkyBlue);;
+    border-radius: 5px;
     height: 389px;
-    width: 274px;
+    width: 300px;
+    object-fit: cover;
 }
 .banner .welcomeMsg button{
     /* background-color: rgb(17, 117, 238);
@@ -146,8 +149,9 @@ section{
     align-items: flex-end;
 }
 .about .aboutImg img{
-    height: 275px;
-    width: 170px;
+    height: 300px;
+    width: 230px;
+    object-fit: cover;
 }
 
 .about .aboutText div{
@@ -219,9 +223,11 @@ section{
     text-align: center;
     margin-bottom: 50px;
 }
+
 .qualiExperItem{
     display: flex;
     justify-content: space-between;
+    margin: 30px;
 }
 .qualification h1,
 .experience h1{
@@ -250,11 +256,12 @@ section{
 .project h1{
     text-align: center;
     font-size: 2.1em;
+    margin-bottom: 100px;
 }
 
 .projectList{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 50px;
     margin: 40px 0px;
 }
@@ -298,7 +305,7 @@ section{
     margin-top: 20px;
     background: var(--colorSkyBlue);
     border: 1px solid var(--colorSkyBlue);
-    font: white;
+    color: white;
     outline: none;
     padding: 10px;
     border-radius: 5px;
@@ -311,27 +318,27 @@ section{
     cursor: pointer;
 }
 
-.contact{
+.contactDesktop{
   position: -webkit-sticky; /* Safari */
   position: fixed;
   bottom: 250px;
   left: -120px;
   /* margin: 1px; */
 }
-.contact div{
+.contactDesktop div{
     margin: 6px;
     padding: 7px;
     box-shadow:  5px 5px 10px #cacccf, 5px 5px 10px #ffffff;
     border-radius: 10px;
     border: 3px solid var(--colorSkyBlue);
 }
-.contact i{
+.contactDesktop i{
     font-size: 35px;
     color: var(--colorSkyBlue);
     cursor: pointer;
 }
 
-.contact div:first-child > a i:hover {
+.contactDesktop div:first-child > a i:hover {
   color: #0077b5;
   border: #0077b5;
 }
@@ -339,16 +346,167 @@ section{
   color: #0077b5;
   border: #0077b5;
 } */
-.contact div:nth-child(2) > a i:hover {
+.contactDesktop div:nth-child(2) > a i:hover {
   color: #171515;
 }
-.contact div:nth-child(3) > i:hover {
+.contactDesktop div:nth-child(3) > i:hover {
   color: #8a3ab9;
 }
-.contact div:nth-child(4) > i:hover {
+.contactDesktop div:nth-child(4) > i:hover {
   color: #4267B2;
 }
-.contact div:nth-child(5) > i:hover {
+.contactDesktop div:nth-child(5) > i:hover {
   color:  #EA4335;
 }
 
+.contact{
+    display: none;
+}
+@media only screen and (max-width: 750px) {
+    .contactDesktop{
+        display: none;
+    }
+
+    section{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .navBar {
+        height: 60px;
+        padding: 0 15px;
+        align-items: center;
+      }
+    
+      .navBar ul {
+        position: fixed;
+        inset: 0 0 0 0%;
+        background: #000;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 350ms ease-in;
+        height: 100%;
+        list-style: none;
+      }
+    
+      .navBar .menu ul li {
+        text-align: center;
+      }
+    
+      .navBar .menu ul li a {
+        margin: 0;
+        color: #fff;
+      }
+    
+      .navBar .mobile-menu {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAKElEQVRIiWNgGAXDHjAisf/TwmwmKhs6CgYhGE1Fo4ByMJqKRsEQAADWCQMKYvEFtQAAAABJRU5ErkJggg==');
+        background-repeat: no-repeat;
+        height: 24px;
+        width: 24px;
+        display: block;
+        position: absolute;
+        border: none;
+        outline: none;
+        color: #fff;
+        top: 18px;
+        right: 15px;
+        z-index: 5;
+      }
+    
+      .navBar .mobile-menu[area-expanded="true"] {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAiklEQVRIie2UQQ6AIAwE0T9I9InwXDn4nPEgicQYbEGMB/ZEQrtDacGYrl8KcIBVxFvASYM9h4IEEs1DzPESwASsMWEDFkXsLK3iEVJsLoFUm+cgr5knkLSJ4bIWT5qmEtXJxwruUJF7qukV3TVU807U5pk9HUQyisUQzZwXQWj92cWkdt911+faAXLtv/VgbT+kAAAAAElFTkSuQmCC');
+      }
+    
+      .navBar .menu ul[data-visible="true"] {
+        transform: translateX(0%);
+      }
+    
+      .navBar .menu ul li a:hover {
+        background: transparent;
+        color: red;
+      }
+    
+    /* .banner{
+        width: 100%;
+        margin: 0 5px;
+        box-sizing: border-box;
+    } */
+    .banner .welcomeMsg h4:first-child{
+       font-size: 2em;
+       margin: 0px;
+    }
+    .banner .welcomeMsg h1{
+        font-size: 2em;
+        margin: 0px;
+    }
+
+    .banner .welcomeMsg h4:nth-child(3){
+        font-size: 1em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .banner .welcomeImg{
+        display: none;
+    }
+    .experience, .qualification, .aboutText{
+        margin: 10px;
+    }
+
+    .about{
+        margin-left: 0;
+        flex-direction: column;
+    }
+    .skill{
+        padding: 0px;
+    }
+    .skill .skillsList{
+        flex-direction: column;
+    }
+    .qualiExper .qualiExperItem{
+        flex-direction: column;
+    }
+
+    .projectList{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    .contact{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 0;
+        bottom: 20px;
+    }
+    .contact a{
+        border: 2px solid;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin: 0 10px;
+        color: var(--colorSkyBlue);
+    }
+    .contact a i{
+        font-size: 20px;
+        color: var(--colorSkyBlue);
+    }
+
+  /* .contact a :first-child{
+  color: #0077b5;
+  border: #0077b5;
+  } */
+
+/* .contact a i:nth-child(3){
+  color: #ddd;
+}
+.contact a c:hover {
+  color: #8a3ab9;
+}
+.contact a :nth-child(4) > i:hover {
+  color: #4267B2;
+}
+.contact a :nth-child(5) > i:hover {
+  color:  #EA4335;
+} */
+}

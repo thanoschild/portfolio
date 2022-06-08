@@ -10,22 +10,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@100&display=swap"
     rel="stylesheet" />
   <script src="https://kit.fontawesome.com/93ea6257ef.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="main.js"></script>
 </head>
 
 <body>
-  
+
   <!-- navigation bar *********************************************************************** -->
-  <nav class="navbar">
-    <ul>
+  <nav class="navBar">
+    <div class="mobile-menu" area-controls="menu" area-expanded="false"></div>
+    <div class="logo">
+      <a href="index.html">
+        <!-- <img src="images/logo.png" alt="logo" /> -->
+        SUMEET
+      </a>
+    </div>
+    <div class="menu" id="menu">
+    <ul data-visible="false">
       <li class="item"><a href="#home">Home</a></li>
       <li class="item"><a href="#about">About Me</a></li>
       <li class="item"><a href="#skill">skills</a></li>
       <li class="item"><a href="#qualiExper">Qualification</a></li>
-      <li class="item"><a href="#projects">projects</a></li>
+      <li class="item"><a href="#project">projects</a></li>
     </ul>
+    </div>
   </nav>
   <!-- banner section *********************************************************************** -->
   <section class="banner" id="home">
@@ -39,13 +47,13 @@
       <a href="cv.pdf" target="_blank"><button class="btn">Download CV</button></a>
     </div>
     <div class="welcomeImg">
-      <img src="https://pngfreepic.com/wp-content/uploads/2021/06/corporate-man-png-1.png" alt="" />
+      <img src="banner1.png" alt="" />
     </div>
   </section>
   <!-- Abiut section *********************************************************************** -->
   <section class="about" id="about">
     <div class="aboutImg">
-      <img src="https://pngfreepic.com/wp-content/uploads/2021/06/corporate-man-png-1.png" alt="" />
+      <img src="banner1.png" alt="" />
     </div>
     <div class="aboutText">
       <p id="intro">My Intro</p>
@@ -172,7 +180,7 @@
           <div>
             <h4>Bachelor of Technology</h4>
             <p>National Institute of Technology</p>
-            <font>Electrical Enginnering | 2019 - 2023 | CGPA : 7.9</font>
+            <font>Electrical Enginnering | 2019 - 2023 | CGPA : 7.66</font>
           </div>
         </div>
         <div style="display: flex">
@@ -229,21 +237,22 @@
         <i class="fa-solid fa-building"></i>
         <h4>TextUtils</h4>
         <p>
-          It is a website in which you can manipulate your text in the way you want. It is created using Bootstrap and React.js
+          It is a website in which you can manipulate your text in the way you want. It is created using Bootstrap and
+          React.js
         </p>
         <a href="https://godspell.github.io/TextUtils/" target="_blank"><button>View Project</button></a>
       </div>
 
       <div class="box" id="box2">
         <i class="fa-solid fa-atom"></i>
-        <h4>Number Guessing</h4> 
+        <h4>Number Guessing</h4>
         <p>
           it is a number Guessing game done by using basic Html, Css and JavaScript
         </p>
         <a href="https://godspell.github.io/Number_Guess/" target="_blank"><button>View Project</button></a>
       </div>
-      
-      
+
+
       <div class="box" id="box3">
         <i class="fa-solid fa-chart-bar"></i>
         <h4>Age Calculator</h4>
@@ -252,17 +261,27 @@
         </p>
         <a href="https://godspell.github.io/Age_Calculator/" target="_blank"><button>View Project</button></a>
       </div>
-  
+
     </div>
   </section>
 
   <section id="contact" class="contact">
+    <a href="https://www.linkedin.com/in/h-sumeet/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://github.com/godspell" target="_blank"><i class="fa-brands fa-github"></i> </a>
+    <a href=""><i class="fa-brands fa-instagram"></i></a>
+    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href=""><i class="fa-solid fa-envelope"></i></a>
+  </section>
+
+    <section id="contactDesktop" class="contactDesktop">
     <div> <a href="https://www.linkedin.com/in/h-sumeet/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
     </div>
     <div><a href="https://github.com/godspell" target="_blank"><i class="fa-brands fa-github"></i> </a></div>
     <div><i class="fa-brands fa-instagram"></i></div>
-    <div><i class="fa-brands fa-facebook-f"></i></div>
+    <div><i class="fa-brands fa-facebook"></i></div>
     <div><i class="fa-solid fa-envelope"></i></div>
   </section>
 </body>
+
 </html>
+
