@@ -449,7 +449,15 @@ section{
     .banner .welcomeImg{
         display: none;
     }
-    .experience, .qualification, .aboutText{
+    .banner .welcomeMsg button{
+       margin: 10px 0px;
+    }
+
+     
+    .aboutText{
+        margin: 20px;
+    }
+    .experience, .qualification{
         margin: 10px;
     }
 
@@ -459,6 +467,9 @@ section{
     }
     .skill{
         padding: 0px;
+    }
+    .skill h1{
+        padding: 20px 0px;
     }
     .skill .skillsList{
         flex-direction: column;
